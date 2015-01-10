@@ -7,8 +7,8 @@ import unittest
 
 class TestLogin(unittest.TestCase):
 
-	username = 'amzn.tester23@gmail.com';
-	password = 'amzntester23';
+	username = 'amzn.tester23@gmail.com'
+	password = 'amzntester23'
 	
 	def setUp(self):
 		global driver
