@@ -7,6 +7,9 @@ import unittest
 
 class TestLogin(unittest.TestCase):
 
+	username = 'amzn.tester23@gmail.com';
+	password = 'amzntester23';
+	
 	def setUp(self):
 		global driver
 		driver = webdriver.Firefox()
