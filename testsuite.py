@@ -7,7 +7,7 @@ class TestSuite(unittest.TestSuite):
 
 	def suite():
 		suite = unittest.TestSuite() # Creating a TestSuite object
-		suite.addTest(TestLogin('test_waitForPageLoad'))
+		suite.addTest(TestLogin('test_ValidUsernameSignIn'))
 		suite.addTest(TestSearch('test_SearchForKeyword'))
 		return suite
 
