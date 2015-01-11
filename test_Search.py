@@ -9,6 +9,7 @@ import unittest
 class TestSearch(unittest.TestCase):
 
 	def setUp(self):
+		"""Setup method opens Amazon.com in the chosen browser."""
 		global driver
 		driver = webdriver.Firefox()
 		# driver = Ie()
@@ -17,13 +18,15 @@ class TestSearch(unittest.TestCase):
 
 
 	def test_SearchForKeyword(self):
+		"""Wait until the search textbox appears, then enter search keywords."""
 		element = WebDriverWait(driver,10).until(EC.element_to_be_clickable((By.ID,'twotabsearchtextbox')))
 		searchbox = driver.find_element_by_id("twotabsearchtextbox")
 		searchbox.clear()
 		searchbox.send_keys('selenium', Keys.RETURN)
 
 	def tearDown(self):
-		driver.quit()
+	"""Shutdown method that closes the browser."""
+	driver.quit()
 
 if __name__ == "__main__":
 	unittest.main() 

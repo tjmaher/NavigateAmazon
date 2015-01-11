@@ -16,6 +16,7 @@ class TestLogin(unittest.TestCase):
 	
 	
 	def setUp(self):
+		"""Setup method opens Amazon.com in the chosen browser and initializes mouse controls"""
 		global driver # Global variable to hold the browser being used
 		global mouse  # Global variable to hold the mouse controls. 
 		driver = webdriver.Firefox() # Use Firefox browser to test... Default browser
@@ -24,7 +25,8 @@ class TestLogin(unittest.TestCase):
 		driver.get("http://www.amazon.com")
 		mouse = webdriver.ActionChains(driver) # Activates the mouse controls
 		
-	def test_ValidUsernameSignIn(self):    
+	def test_ValidUsernameSignIn(self):
+		"""Go to SignIn page, enter designated username and password, and select Sign In button"""
 		# The SignIn button that must be clicked is: class="nav-action-button"		
 		button_SignIn = driver.find_element_by_class_name('nav-action-button')
 
@@ -51,6 +53,7 @@ class TestLogin(unittest.TestCase):
 		
 		
 	def tearDown(self):
+		"""Shutdown method that closes the browser."""
 		driver.quit()
 
 if __name__ == "__main__":
