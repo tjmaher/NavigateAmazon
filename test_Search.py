@@ -25,8 +25,8 @@ class TestSearch(unittest.TestCase):
 		searchbox.send_keys('selenium', Keys.RETURN)
 
 	def tearDown(self):
-	"""Shutdown method that closes the browser."""
-	driver.quit()
+		"""Shutdown method that closes the browser."""
+		driver.quit()
 
 if __name__ == "__main__":
 	unittest.main() 
