@@ -35,6 +35,7 @@ class TestLogin(unittest.TestCase):
 
 		# Wait until the Sign In page is fully loaded before continuing. 
 		element = WebDriverWait(driver,10).until(EC.element_to_be_clickable((By.ID,'ap_email')))
+		self.assertEqual("Amazon.com Sign In", driver.title)
 
 		# Enter the username into the username textbox
 		txtboxUserName = driver.find_element_by_id('ap_email')
@@ -49,7 +50,6 @@ class TestLogin(unittest.TestCase):
 		# Select the Sign In button
 		buttonSignIn = driver.find_element_by_id('signInSubmit-input')
 		buttonSignIn.click()
-		
 		
 		
 	def tearDown(self):
