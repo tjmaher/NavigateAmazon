@@ -47,6 +47,9 @@ class TestLogin(unittest.TestCase):
 		txtboxUserName.clear()
 		txtboxUserName.send_keys(password)		
 		
+		# Take a screenshot to prove that you have Signed In. 
+		driver.save_screenshot('img/screenshot_signin.png')
+		
 		# Select the Sign In button
 		buttonSignIn = driver.find_element_by_id('signInSubmit-input')
 		buttonSignIn.click()
